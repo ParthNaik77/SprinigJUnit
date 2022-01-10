@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: com.spring.junit.testing.SpringJUnitApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.289 s <<< FAILURE! - in com.spring.junit.testing.SpringJUnitApplicationTests
+addCustomerTest  Time elapsed: 0.325 s  <<< ERROR!
+org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+	at com.spring.junit.testing.SpringJUnitApplicationTests.addCustomerTest(SpringJUnitApplicationTests.java:37)
+
+getAllCustomersTest  Time elapsed: 0.135 s  <<< ERROR!
+org.mockito.exceptions.misusing.MissingMethodInvocationException: 
+
+when() requires an argument which has to be 'a method call on a mock'.
+For example:
+    when(mock.getArticles()).thenReturn(articles);
+
+Also, this error might show up because:
+1. you stub either of: final/private/equals()/hashCode() methods.
+   Those methods *cannot* be stubbed/verified.
+   Mocking methods declared on non-public parent classes is not supported.
+2. inside when() you don't call method on mock but on some other object.
+
+	at com.spring.junit.testing.SpringJUnitApplicationTests.getAllCustomersTest(SpringJUnitApplicationTests.java:29)
+
